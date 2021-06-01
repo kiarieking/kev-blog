@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Kev-blog</title>
-</head>
-<body>
-<h1>Kev Blog</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Post List</h1>
+    <div>
+        {% for post in posts %}
+        <h1>{{post.title}}</h1>
+        <h2>{{post.author}}</h2>
+        <P>{{post.text}}</P>
+        <small>{{post.created_date}}</small>
+        {% endfor %}
+    </div>
+{% endblock %}
