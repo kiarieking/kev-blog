@@ -1,10 +1,5 @@
 {% extends 'base.html' %}
 {% block content %}
-    <header class="page-header">
-        <div class="container">
-            <h1><a href="/"> Post List</a></h1>
-        </div>
-    </header>
 
     <div>
       <main class="container">
@@ -15,7 +10,7 @@
                         <time class="date">
                             {{ post.published_date }}
                         </time>
-                        <h2><a href="">{{ post.title }}</a></h2>
+                        <h2><a href="{% url 'post_detail' post.id%}">{{ post.title }}</a></h2>
                         <p>{{ post.text|linebreaksbr }}</p>
                     </article>
                 {% endfor %}
