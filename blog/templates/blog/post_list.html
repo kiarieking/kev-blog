@@ -3,12 +3,11 @@
     <h1>Post List</h1>
     <div>
         {% for post in posts %}
-        <a href=" {% url 'post_detail' post.id %}">
-        <h1>{{post.title}}</h1>
-        <h2>{{post.author}}</h2>
-        <P>{{post.text}}</P>
-        <small>{{post.created_date}}</small>
-            </a>
+        <article>
+            <time>Published: {{post.published_date}}</time>
+            <h2><a href="">{{post.title}}</a> </h2>
+            <p>{{post.text|linebreaksbr}}</p>
+        </article>
         {% endfor %}
     </div>
 {% endblock %}
