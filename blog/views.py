@@ -44,3 +44,6 @@ def post_edit(request, id):
         form = PostForm(instance=post)
     context = {'form': form}
     return render(request, 'blog/post_edit.html', context)
+
+
+def register(request):
