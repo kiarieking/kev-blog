@@ -15,6 +15,11 @@
                 <a href="{% url 'post_new' %}" class="top-menu">
                     {% include './blog/icons/file-earmark-plus.svg'%}
                 </a>
+                <aside>
+                    <a class="top-menu" href="{% url 'logout' %}">
+                    logout
+                </a>
+                </aside>
             {% else %}
               <aside>
                 <a class="top-menu" href="{% url 'login' %}">
